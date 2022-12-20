@@ -1,0 +1,26 @@
+.footer{
+    background-color: var(--footer);
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    row-gap: 20px;
+    padding: 20px 0;
+    bottom: 0;
+    width: 100%;
+    line-height: 35px;
+}
+
+.footer a{
+    color: var(--white);
+    text-decoration: none;
+}
+
+.socialLinks a{
+    margin: 0 5px;
+}
+
+
+

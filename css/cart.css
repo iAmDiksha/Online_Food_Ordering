@@ -1,0 +1,91 @@
+.cart_container{
+    height: 100vh;
+    font-size: 20px;
+    background-color: var(--body);
+}
+
+.emptyCart{
+    padding-top: 30px;
+    text-align: center;
+}
+
+.emptyCart :nth-child(n){
+    margin: 10px auto;
+}
+
+.emptyCart .cartImage{
+    width: 200px;
+}
+
+.emptyCart button{
+    background-color: var(--main-color);
+    padding: 10px 30px;
+    border: none;
+    font-size: 20px;
+}
+
+.emptyCart .lightText{
+    color: grey;
+    text-transform: lowercase;
+}
+
+.cart_container .heading{
+    text-align: center;
+    padding: 20px;
+}
+
+.table{
+    width: 100%;
+    margin: 10px 20px;
+}
+
+.table, .table_head , .table_body{
+    text-align: center;
+}
+
+.table, th, td{
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 10px 5px;
+}
+
+.gt_box{
+    margin: 10px auto;
+}
+
+.gt_box .gt_price{
+    text-align: center;
+}
+
+.rupee{
+    font-size: 13px;
+}
+
+.remove{
+    background-color: var(--danger);
+    padding: 5px 10px;
+    text-align: center;
+    font-size: 15px;
+    color: var(--white);
+    border-color: var(--danger);
+}
+
+.iquantity{
+    text-align: center;
+    font-size: 20px;
+}
+
+.place_order{
+    background-color: var(--main-color);
+    padding: 5px;
+    text-align: center;
+    font-size: 20px;
+    width: 100%;
+    border-color: var(--main-color);
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-gap: 10px;
+}

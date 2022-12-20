@@ -1,0 +1,13 @@
+CREATE TABLE `online_db`.`menu` (`fid` INT(5) NOT NULL AUTO_INCREMENT , `fname` VARCHAR(35) NOT NULL , `fprice` INT(5) NOT NULL , `fimg` VARCHAR(35) NOT NULL , `fcategory` VARCHAR(25) NOT NULL , PRIMARY KEY (`fid`)) ENGINE = InnoDB;
+
+
+//--- Insert ------------------------------------
+INSERT INTO `menu` (`fid`, `fname`, `fprice`, `fimg`, `fcategory`) VALUES ('1', 'Mango Juice', '25', 'mango_juice', 'Drinks');
+
+INSERT INTO `menu` (`fname`, `fprice`, `fimg`, `fcategory`) VALUES ('Sandwich', '20', 'sand', 'Sandwich');
+
+INSERT INTO `menu` (`fname`, `fprice`, `fimg`, `fcategory`) VALUES ('Aloo Paratha', '20', 'alooparatha', 'Paratha');
+
+INSERT INTO `menu` (`fname`, `fprice`, `fimg`, `fcategory`) VALUES ('Burger', '35', 'burger1', 'Burger');
+
+INSERT INTO `menu` (`fname`, `fprice`, `fimg`, `fcategory`) VALUES ('Aloo Chaat', '30', 'aloochaat', 'Chaat');

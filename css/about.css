@@ -1,0 +1,6 @@
+.main{
+    min-height: 90vh;
+    text-align: center;
+    padding: 30px;
+    background-color: var(--body);
+}

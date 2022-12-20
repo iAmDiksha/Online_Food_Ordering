@@ -1,0 +1,63 @@
+.main{
+    min-height: 90vh;
+    padding: 30px;
+    background-color: var(--body);
+}
+
+.search-form form{
+    display: flex;
+    gap:1.3rem;
+    width: 70%;
+    margin: auto;
+    min-width: 280px;
+ }
+ 
+ .search-form form .box{
+    width: 100%;
+    border: 1px solid  var(--black);
+    padding:1rem;
+    font-size: 20px;
+    color:var(--black);
+ }
+
+ .small-title{
+     padding-top: 20px;
+     text-align: center;
+ }
+
+ 
+.menuCards{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px auto;
+    font-size: 15px;
+}
+
+
+.menuCards > .menucard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}
+
+.menucard .menuItem{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+ 
+ .search-form form .fa-search{
+    width: 80px;
+    background-color: var(--black);
+    color:var(--white);
+    cursor: pointer;
+    font-size: 2rem;
+ }
+ 
+ .search-form form .fa-search:hover{
+    background-color: var(--main-color);
+    color:var(--black);
+ }
