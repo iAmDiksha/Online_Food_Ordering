@@ -1,0 +1,31 @@
+.main{
+    min-height: 90vh;
+    padding: 30px;
+    background-color: var(--body);
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.message_box{
+    border: 2px solid var(--black);
+    background-color: var(--white);
+    width: 350px;
+    padding: 20px;
+    line-height: 1.7rem;
+    margin: 20px;
+}
+
+.message_box button{
+    background-color: var(--danger);
+    padding: 5px 30px;
+    font-size: 22px;
+    border: none;
+    margin-top: 20px;
+    color: var(--white);
+}

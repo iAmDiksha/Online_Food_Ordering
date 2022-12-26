@@ -69,7 +69,7 @@
             ?>
                 <form action="manage_cart.php" method="post">
                     <div class="foodCard">
-                        <img src="images/<?php echo $row['fimg'] ?>.jpg" alt="image" class="foodItem">
+                        <img src="images/<?php echo $row['fimg'] ?>" alt="image" class="foodItem">
                         <div class="foodItemDescription">
                             <h4><?php echo $row['fname'] ?></h4>
                             <h3><?php echo $row['fprice'] ?> Rs.</h3>

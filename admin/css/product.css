@@ -1,0 +1,105 @@
+.main{
+    min-height: 90vh;
+    text-align: center;
+    padding: 30px;
+    background-color: var(--body);
+}
+.form{
+    width: 400px;
+    padding: 10px;
+    margin: 10px auto;
+    border: 1px solid var(--admin);
+}
+.container{
+    text-align: left;
+    padding: 10px;
+}
+.form .container input, .form .container select, .btn{
+    margin: 10px auto;
+    padding: 10px;
+    width: 100%;
+    font-size: 20px;
+    background-color: transparent;
+    border: 1px solid black;
+}
+
+.btn{
+    background-color: var(--color);
+    border-color: var(--color);
+    font-weight: 700;
+    color: var(--admin);
+}
+
+.btn:hover{
+    background-color: var(--special);
+    border-color: var(--special);
+    color: var(--white);
+}
+
+.products{
+    margin-top: 50px;
+}
+
+.foodItems{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 40px;
+}
+
+.foodCard{
+    width: 250px;
+    background-color: var(--white);
+    border-radius: 20px;
+    text-align: center;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+    box-shadow: 4px 4px 2px -2px rgba(0,0,0,.2);
+}
+
+.foodCard :nth-child(n){
+    margin-bottom: 5px;
+}
+
+.foodItem{
+    width: 230px;
+    height: 230px;
+    border-radius: 20px;
+    margin: 10px auto;
+}
+
+.foodItemDescription{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.updatebtn, .deletebtn{
+    font-size: 20px;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 4px 4px 2px -2px rgba(0,0,0,.2);
+    border-radius: 20px;
+}
+
+.updatebtn{
+    background-color: var(--main-color);
+    border: 2px solid var(--main-color);
+}
+
+.deletebtn{
+    background-color: var(--danger);
+    border: 2px solid var(--danger);
+    color: var(--white);
+}
+
+.btns{
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    justify-content: space-around;
+    align-items: center;
+}
+

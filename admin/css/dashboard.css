@@ -1,0 +1,37 @@
+.main{
+    min-height: 90vh;
+    text-align: center;
+    padding: 30px;
+    background-color: var(--body);
+}
+
+.container{
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.box{
+    width: 300px;
+    height: 250px;
+    background-color: var(--admin);
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 5px;
+    color: var(--color);
+}
+
+.box i{
+    font-size: 100px;
+}
+
+.box:hover{
+    background-color: var(--color);
+    color: var(--admin);
+}

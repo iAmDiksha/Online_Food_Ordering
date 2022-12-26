@@ -1,0 +1,6 @@
+INSERT INTO `category` (`cid`, `cname`) VALUES ('1', 'Drinks'), ('2', 'Chaat'), ('3', 'Burger'), ('4', 'Paratha'), ('5', 'Pasta'), ('6', 'Piz
+
+
+create view countcategory
+as
+SELECT c.cid, c.cname, COUNT(m.fcategory) as count FROM menu m INNER JOIN category c on m.fcategory = c.cname GROUP BY fcategory order by c.cid;
