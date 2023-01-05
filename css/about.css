@@ -1,6 +1,24 @@
-.main{
-    min-height: 90vh;
-    text-align: center;
-    padding: 30px;
-    background-color: var(--body);
+.main {
+  min-height: 90vh;
+  text-align: center;
+  padding: 30px;
+  background-color: var(--body);
+}
+
+.main p {
+  text-align: left;
+  margin: 15px auto;
+  line-height: 1.8rem;
+}
+
+.orderBtn {
+  font-size: 25px;
+  padding: 5px 15px;
+  font-weight: 700;
+  color: var(--white);
+  border: 2px solid var(--black);
+  background-color: transparent;
+  cursor: pointer;
+  margin-top: 30px;
+  color: var(--black);
 }

@@ -69,7 +69,7 @@
             $num = mysqli_num_rows($result);
             $_SESSION['category'] = $num;
             ?>
-            <a href="#">
+            <a href="category.php">
                 <div class="box">
                     <h3>Food Categories</h3>
                     <h2><?php echo $_SESSION['category']?></h2>

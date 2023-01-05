@@ -24,6 +24,26 @@
     .flex a{
         color: var(--color);
     }
+
+    .profile{
+        text-align: left;
+        padding: 15px 5px;
+        border: none;
+    }
+    .profile p{
+        color: var(--admin);
+        padding: 5px 10px;
+    }
+    .profile .flex-btns a{
+        text-transform: none;
+        color: var(--special);
+        display: inline-block;
+        width: 100%;
+        padding: 10px;
+    }
+    .profile .flex-btns a:hover{
+        background-color: var(--body);
+    }
 </style>
 <header class="header">
 
@@ -72,6 +92,11 @@
                 echo "<p>Hello, ". $_SESSION['name'] ."</p>";
             // }
         ?>
+        <div class="flex-btns">
+            <a href="adminprofile.php">Profile</a><br>
+            <a href="adminlogin.php">Login</a><br>
+            <a href="adminregister.php">Register a new admin</a><br>
+        </div>
         <!-- <a href="login.php"><button class="login-btn">Login</button></a> -->
     </div>
 
