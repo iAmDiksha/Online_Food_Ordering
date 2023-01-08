@@ -15,6 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $login = true;
         session_start();
         $_SESSION['loggedin'] = true;
+        $_SESSION['registered'] = true;
         $_SESSION['email'] = $email;
        
         $_SESSION['full_name'] = $rowData["full_name"];

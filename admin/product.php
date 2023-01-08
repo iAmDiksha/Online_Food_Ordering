@@ -66,7 +66,7 @@
 
                                     <div class="btns">
                                         <button type="submit" name="update_product" class="updatebtn">Update</button>
-                                        <button type="submit" name="delete_product" class="deletebtn" onclick="return confirm('delete this message?');">Delete</button>
+                                        <button type="submit" name="delete_product" class="deletebtn" onclick="return confirm('delete this product?');">Delete</button>
                                     </div>
 
                                     <input type="hidden" name="Item_name" value="<?php echo $row['fname'] ?>">

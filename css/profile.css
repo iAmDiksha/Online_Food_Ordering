@@ -1,0 +1,56 @@
+.main{
+    min-height: 90vh;
+    padding: 30px;
+    background-color: var(--body);
+    text-align: center;
+}
+
+.profile_container{
+    max-width: 35rem;
+    margin:0 auto;
+    border:2px solid var(--black);
+    padding:1.5rem;
+ }
+
+ .profile_container form{
+     text-align: left;
+ }
+
+ .profile_container .image{
+     width: 100%;
+     text-align: center;
+     margin: 20px auto;
+ }
+
+ .profile_container .image img{
+     width: 180px;
+ }
+
+.profile_container form .user-info p i{
+    color:var(--light-color);
+    margin-right: 1rem;
+ }
+ 
+ .profile_container form .user-info p span{
+    color:var(--black);
+ }
+
+ .profile_container form .user-info p{
+     line-height: 2rem;
+ }
+
+ .profile_container .btn.btn1{
+     margin-bottom: 20px;
+ }
+
+ .profile_container .btn{
+     display: inline-block;
+     background-color: var(--main-color);
+     padding: 10px 20px;
+     color: var(--black);
+     margin-top: 15px;
+     border: none;
+     font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+ }

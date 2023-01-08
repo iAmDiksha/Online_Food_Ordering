@@ -25,21 +25,17 @@
         color: var(--color);
     }
 
-    .profile{
-        text-align: left;
-        padding: 15px 5px;
-        border: none;
-    }
     .profile p{
         color: var(--admin);
         padding: 5px 10px;
+        margin-bottom: 5px;
     }
     .profile .flex-btns a{
         text-transform: none;
         color: var(--special);
         display: inline-block;
         width: 100%;
-        padding: 10px;
+        padding: 8px 10px;
     }
     .profile .flex-btns a:hover{
         background-color: var(--body);
@@ -95,6 +91,7 @@
         <div class="flex-btns">
             <a href="adminprofile.php">Profile</a><br>
             <a href="adminlogin.php">Login</a><br>
+            <a href="adminlogout.php" onclick="return confirm('Are you sure you want to logged out?');">Logout</a>
             <a href="adminregister.php">Register a new admin</a><br>
         </div>
         <!-- <a href="login.php"><button class="login-btn">Login</button></a> -->

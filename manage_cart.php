@@ -1,6 +1,6 @@
 <?php
     session_start();
-    if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true){
+    if(isset($_SESSION['registered']) && $_SESSION['registered'] == true){
         if($_SERVER["REQUEST_METHOD"] == "POST"){
             if(isset($_POST['Add_To_Cart'])){
                 //if cart is having at least one item

@@ -16,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         session_start();
         $_SESSION['adminlogin'] = true;
         $_SESSION['name'] = $name;
-        $_SESSION['email'] = $rowData["email"];
+        $_SESSION['adminemail'] = $rowData["email"];
     } 
     else {
         $showError = "Invalid email or password";

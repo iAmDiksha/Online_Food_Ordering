@@ -2,6 +2,12 @@
 include 'connect.php';
 session_start();
 $login = false;
+$registered = false;
+if (isset($_SESSION['registered'])) {
+    if ($_SESSION['registered'] == true) {
+        $registered = true;
+    }
+}
 if (isset($_SESSION['loggedin'])) {
     if ($_SESSION['loggedin'] == true) {
         $login = true;
@@ -32,7 +38,7 @@ if (isset($_SESSION['cart'])) {
 
         <div class="icons">
             <a href="search.php"><i class="fas fa-search"></i></a>
-            <a href="cart.php"><i class="fas fa-shopping-cart"></i><span>(<?php echo $count?>)</span></a>
+            <a href="cart.php"><i class="fas fa-shopping-cart"></i><span>(<?php echo $count ?>)</span></a>
             <a href="#">
                 <div id="user-btn" class="fas fa-user"></div>
             </a>
@@ -49,20 +55,35 @@ if (isset($_SESSION['cart'])) {
     </section>
 
     <nav class="menu">
-            <a href="home.php">home</a>
-            <a href="menu.php">menu</a>
-            <a href="orders.php">orders</a>
-            <a href="about.php">about</a>
-            <a href="contact.php">contact</a>
+        <a href="home.php">home</a>
+        <a href="menu.php">menu</a>
+        <a href="orders.php">orders</a>
+        <a href="about.php">about</a>
+        <a href="contact.php">contact</a>
     </nav>
 
     <div class="profile">
         <?php
-            if($login){
-                echo "<p>Hello, ". $_SESSION['full_name'] ."</p>";
-            }
+        if ($registered) {
+            echo "<p>Hello, " . $_SESSION['full_name'] . "</p>";
+        }
+        echo '<div class="flex-btns">';
+        if ($registered) {
+            echo '
+                <a href="profile.php">Profile</a><br>
+                ';
+        }
+        if ($login == false) {
+            echo '<a href="login.php">Login</a><br>';
+        }
+        if ($registered) {
         ?>
-        <a href="login.php"><button class="login-btn">Login</button></a>
+               <a href="logout.php" onclick="return confirm('Are you sure you want to logged out?');">Logout</a>
+        <?php
+        }
+        echo '</div>';
+        ?>
+
     </div>
 
 </header>
@@ -77,9 +98,8 @@ if (isset($_SESSION['cart'])) {
     hamburger.addEventListener("click", () => {
         menu.classList.toggle("active");
     });
-    
+
     user_btn.addEventListener("click", () => {
         profile.classList.toggle("active");
     });
-
 </script>

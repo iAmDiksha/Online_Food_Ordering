@@ -13,7 +13,7 @@
     include 'header.php';
     ?>
 <?php 
-if (isset($_SESSION['cart']) && count($_SESSION['cart']) > 0) {
+if (isset($_SESSION['registered']) && isset($_SESSION['cart']) && count($_SESSION['cart']) > 0) {
 ?>
     <div class="cart_container">
         <div class="heading">

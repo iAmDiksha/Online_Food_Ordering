@@ -11,9 +11,22 @@
 <body>
     <?php
     include 'navbar.php';
+
+    if ($_SERVER["REQUEST_METHOD"] == "POST"){
+        if (isset($_POST['add_category'])){
+            $cname = $_POST['cname'];
+            $sql = "INSERT INTO `category` (`cname`) VALUES ('$cname');";
+            $result = mysqli_query($con, $sql);
+
+        echo "<script>
+                alert('Category is successfully added.');
+            </script>";
+        } 
+    }
     ?>
     <main class="main">
         <div class="container">
+            //! need to work (deletion, all the products of that category should also be deleted.)
             <h1>Food Categories</h1>
             <table class="category_table">
                 <thead>
@@ -57,10 +70,22 @@
             </table>
         </div>
 
-        <form action="">
-            //!! need to work
-            <button type="submit" class="btn" onclick="return prompt('Enter the category name: ');">Add New Category</button>
+        <form action="category.php" method="post">
+            //!! need to work (Category with 0 products don't occur!)
+            <input type="hidden" id="cname" name="cname" value="">
+            <button type="submit" name="add_category" class="btn" onclick="return addCategory();">Add New Category</button>
         </form>
     </main>
+
+    <script>
+        function addCategory(){
+           let add = prompt('Enter the category name: ');
+           if(add != null){
+              document.getElementById("cname").value = add;
+              return true;
+           }
+           return false;
+        }
+    </script>
 </body>
 </html>

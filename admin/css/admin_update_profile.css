@@ -1,0 +1,38 @@
+.main{
+    min-height: 90vh;
+    padding: 30px;
+    background-color: var(--body);
+    text-align: center;
+}
+
+.form{
+    width: 400px;
+    padding: 10px;
+    margin: 10px auto;
+    border: 1px solid var(--black);
+}
+.container{
+    text-align: left;
+    padding: 10px;
+}
+.form .container input, .form textarea, .btn{
+    margin: 10px auto;
+    padding: 10px;
+    width: 100%;
+    font-size: 20px;
+    background-color: transparent;
+    border: 1px solid black;
+}
+
+.btn{
+    background-color: var(--color);
+    border-color: var(--color);
+    font-weight: 700;
+    color: var(--admin);
+}
+
+.btn:hover{
+    background-color: var(--special);
+    border-color: var(--special);
+    color: var(--white);
+}

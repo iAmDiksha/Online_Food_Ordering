@@ -5,6 +5,14 @@
 
 <?php
 include 'connect.php';
+session_start();
+
+if(isset($_SESSION['registered'])){
+    echo '<script>
+        alert("You are already Registerd!");
+        window.location.href="login.php";
+    </script>';
+}
 
 $showAlert = false;
 $showError = false;
@@ -36,6 +44,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             if ($result) {
                 $showAlert = true;
+                // $registered = true;
+                // session_start();
+                $_SESSION['registered'] = true;
+                $_SESSION['email'] = $email;
+               
+                $_SESSION['full_name'] = $full_name;
+                $_SESSION['mobile_number'] = $mobile_number;
+                $_SESSION['address'] = '';
             }
         } else {
             $showError = "Passwords do not match.";
@@ -59,9 +75,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
 <?php
     if ($showAlert) {
+        // window.location.href = "login.php";
         echo '
-        <script>alert(" Success! Your account is now created and you can login.");
-            window.location.href = "login.php";
+        <script>alert(" Success! Your account is now created.");
+            window.location.href = "menu.php";
         </script>
             ';
     }
