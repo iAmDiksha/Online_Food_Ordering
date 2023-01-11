@@ -18,6 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION['registered'] = true;
         $_SESSION['email'] = $email;
        
+        $_SESSION['user_id'] = $rowData["sno"];
         $_SESSION['full_name'] = $rowData["full_name"];
         $_SESSION['mobile_number'] = $rowData["mobile_number"];
         $_SESSION['address'] = '';
@@ -59,7 +60,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <h1>Login</h1>
         <input type="email" name="email" placeholder="Email" required>
         <input type="password" name="password" placeholder="Password" required>
-        <a href="#">Forgot Password?</a>
+        <a href="forgotpassword.php">Forgot Password?</a>
         <button type="submit">Login</button>
         <div>
             <p>Dont't have an account? <a href="signup.php">Sign up</a></p>

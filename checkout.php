@@ -15,6 +15,11 @@
     if(!isset($_SESSION['registered'])){
         header('location: login.php');
     }
+    if($_SERVER["REQUEST_METHOD"] == "POST"){
+        if(isset($_POST['place_order'])){
+            $gtotal = $_POST['grand_total'];
+        }
+    }
     // $email = $_SESSION['email'];
     // $sql = "select `sno` from user where `email` = '$email'";
     // $result = mysqli_query($con, $sql) or die("query unsuccessful!");
@@ -23,21 +28,17 @@
 
     <main class="main">
         <section class="checkout">
-            <form action="manage_profile.php" method="post">
+            <form action="manage_orders.php" method="post">
             <!-- //!! wherever this form is submitted please post date and time as well a seperate 2 columns into mysql.
             //! so that we can take care of date ... when order is placed. 
         -->
-                <!-- <div class="grand-total">
-                    <h3>cart items</h3>
-                    <a href="cart.php" class="btn">veiw cart</a>
-                </div> -->
+                <input type="hidden" name="grand_total" value="<?php echo $gtotal?>">
+               <div class="grand-total">
+                    <h3>Total</h3>
+                    <h3><?php echo $gtotal?> Rs.</h3>
+                </div>
 
-                <!-- <input type="hidden" name="total_products" value="<?= $total_products; ?>"> -->
-                <!-- <input type="hidden" name="total_price" value="<?= $grand_total; ?>" value="">
-                <input type="hidden" name="name" value="<?= $fetch_profile['name'] ?>">
-                <input type="hidden" name="mob_number" value="<?= $fetch_profile['number'] ?>">
-                <input type="hidden" name="email" value="<?= $fetch_profile['email'] ?>">
-                <input type="hidden" name="address" value="<?= $fetch_profile['address'] ?>"> -->
+                <a href="cart.php">View Cart</a> 
 
                 <div class="user-info">
                     <h3>your info</h3>
@@ -46,14 +47,18 @@
                     <p><i class="fas fa-phone"></i><span><?= $_SESSION['mobile_number'] ?></span></p>
                     <p><i class="fas fa-envelope"></i><span><?= $_SESSION['email'] ?></span></p>
                     <!-- <button type="submit" name="update_profile" class="btn btn1">update info</button> -->
-                    <a href="profile.php" class="btn btn1">Go to profile to update info</a>
                     <h3>delivery address</h3>
                     <p><i class="fas fa-map-marker-alt"></i><span><?php if ($_SESSION['address'] == '') {
-                                                                        echo 'please enter your address';
+                                                                        echo '
+                                                                        Address
+                                                                        <input type="text" required name="address" placeholder= "please enter your address">';
+                                                                        //! put it in session later in manage file.
                                                                     } else {
                                                                         echo $_SESSION['address'];
+                                                                        echo '<input type="hidden" name="address" value="'. $_SESSION['address'].'">';
                                                                     } ?></span></p>
-                    <a href="update_address.php" class="btn">update address</a>
+                    <a href="profile.php" class="btn btn1">Go to your profile to update details</a>
+                    <!-- <a href="update_address.php" class="btn">update address</a> -->
                     <!-- <button type="submit" name="update_address" class="btn btn1">update address</button> -->
                     <select name="method" class="box" required>
                         <option value="" disabled selected>select payment method --</option>
@@ -62,7 +67,7 @@
                         <!-- <option value="paytm">paytm</option>
                         <option value="paypal">paypal</option> -->
                     </select>
-                    <input type="submit" value="place order" class="btn <?php if ($_SESSION['address'] == '') {
+                    <input type="submit" name="order_placed" value="place order" class="btn <?php if ($_SESSION['address'] == '') {
                                                                             echo 'disabled';
                                                                         } ?>" style="width:100%; background:var(--danger); color:var(--white);" name="submit">
                 </div>

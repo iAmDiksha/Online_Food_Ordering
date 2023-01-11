@@ -21,6 +21,7 @@
     backdrop-filter: blur(3px);
 
     color: var(--white);
+    line-height: 40px;
 }
 
 .rightpng img{

@@ -35,7 +35,6 @@ if (isset($_SESSION['registered']) && isset($_SESSION['cart']) && count($_SESSIO
                     <tbody class="table_body">
                         <?php
                         foreach ($_SESSION['cart'] as $key => $value) {
-
                             echo '
                                     <tr>
                                         <td>' . ($key + 1) . '</td>
@@ -44,7 +43,7 @@ if (isset($_SESSION['registered']) && isset($_SESSION['cart']) && count($_SESSIO
                                         <td> <i class="fas fa-rupee-sign rupee"></i>' . $value['Price'] . '<input type="hidden" class="iprice" value="' . $value['Price'] . '"></td>
                                         <td>
                                             <form action="manage_cart.php" method="POST">
-                                                <input class="iquantity" onchange="this.form.submit();" name="Mod_Quantity" type="number" value="' . $value['Quantity'] . '" min="1" max="10">
+                                                <input class="iquantity" onchange="this.form.submit();" name="Mod_Quantity" type="number" value="' . $value['Quantity'] . '" min="1" max="20">
                                                 <input type="hidden" name="Item_name" value="' . $value['Item_name'] . '">
                                             </form>
                                         </td>
@@ -71,7 +70,8 @@ if (isset($_SESSION['registered']) && isset($_SESSION['cart']) && count($_SESSIO
                 if (isset($_SESSION['cart']) && count($_SESSION['cart']) > 0) {
                 ?>
                     <form action="checkout.php" method="post">
-                        <button class="place_order">Place Order</button>
+                        <input type="hidden" name="grand_total" id="grand_total" value="0">
+                        <button class="place_order" name="place_order">Place Order</button>
                     </form>
                 <?php
                 }
@@ -104,6 +104,7 @@ else {
     let iquantity = document.getElementsByClassName('iquantity');
     let itotal = document.getElementsByClassName('itotal');
     let gtotal = document.getElementById('gtotal');
+    let grand_total = document.getElementById('grand_total');
 
     function subtotal() {
         let gt = 0;
@@ -113,6 +114,7 @@ else {
             gt = gt + sum;
         }
         gtotal.innerText = gt;
+        grand_total.value = gt;
     }
 
     subtotal();

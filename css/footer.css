@@ -11,11 +11,11 @@
     bottom: 0;
     width: 100%;
     line-height: 30px;
-    font-size: 18px;
+    font-size: 15px;
 }
 
 .footer a{
-    font-size: 18px;
+    font-size: 15px;
     color: var(--white);
     text-decoration: none;
 }

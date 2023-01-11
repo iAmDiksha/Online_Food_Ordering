@@ -18,6 +18,13 @@
     color:var(--black);
  }
 
+.checkout form .grand-total{
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     align-items: center;
+ }
+
 .checkout form .user-info p i{
     color:var(--light-color);
     margin-right: 1rem;
@@ -29,6 +36,10 @@
 
  .checkout form .user-info p{
      line-height: 2rem;
+ }
+
+ .btn.btn1{
+     text-transform: none;
  }
  
  .checkout form .user-info .box{
@@ -50,3 +61,12 @@
      border: none;
      font-weight: 600;
  }
+
+ .checkout form input{
+    margin: 10px auto;
+    padding: 10px;
+    width: 100%;
+    font-size: 20px;
+    background-color: transparent;
+    border: 1px solid black;
+}
