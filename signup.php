@@ -48,7 +48,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 // session_start();
                 $_SESSION['registered'] = true;
                 $_SESSION['email'] = $email;
-               
                 $_SESSION['full_name'] = $full_name;
                 $_SESSION['mobile_number'] = $mobile_number;
                 $_SESSION['address'] = '';

@@ -4,3 +4,46 @@
     padding: 30px;
     background-color: var(--body);
 }
+
+.container{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-around;
+    align-items: center;
+    line-height: 30px;
+    row-gap: 30px;
+}
+
+.box{
+    padding: 30px;
+    text-align: left;
+    border: 1px solid var(--black);
+    width: 600px;
+    margin: auto;
+    max-width: 85%;
+}
+
+.box .details p{
+    color: var(--light-color);
+}
+
+.box .details p span, .box .details .orders p{
+    color: var(--black);
+}
+
+.box .time{
+    text-align: right;   
+}
+
+.no_orders{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 30px;
+}
+
+.no_orders img{
+    width: 250px;
+    margin: 40px;
+}

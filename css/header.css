@@ -132,7 +132,7 @@ body ::selection{
   display: inline-block;
 }
 
-@media screen and (max-width: 820px) {
+@media screen and (max-width: 870px) {
   .navbar{
     display: none;
   } 

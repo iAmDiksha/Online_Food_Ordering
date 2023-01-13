@@ -20,11 +20,22 @@
 
                 $result = mysqli_query($con, $sql);
 
+                foreach ($_SESSION['cart'] as $key => $value) {
+                            $name =  $value['Item_name'];
+                            $price = $value['Price'];
+                            $quantity = $value['Quantity']; 
+                            $sql = "insert into `ordered_items` (`user_id`, `name`, `quantity`, `price`) VALUES ($user_id, '$name', '$quantity', '$price') ";
+
+                            $result = mysqli_query($con, $sql);
+                }
+
+                unset($_SESSION['cart']);
+
                 if($result){
                     echo '
                     <script>
                     alert("Your Order has been successfully placed.");
-                    window.location.href = "home.php";
+                    window.location.href = "orders.php";
                     </script>
                     ';
                 }
