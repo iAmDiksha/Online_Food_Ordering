@@ -21,39 +21,45 @@
 
     <div class="menuCards">
         <div class="menucard">
-            <a href="paratha.php"> <img src="images/paratha.png" alt="paratha" class="menuItem"> </a>
+           <form action="food.php" method="post" id="form1">
+           <a href="#" onclick="document.forms['form1'].submit();"> <img src="images/paratha.png" alt="paratha" class="menuItem"> </a>
+           <input type="hidden" name="category" value="Paratha">
+           </form>
             <p>Paratha</p>
         </div>
         <div class="menucard">
-            <a href=""><img src="images/pizza.png" alt="pizza" class="menuItem"></a>
+            <form action="food.php" method="post" id="form2">
+            <a href="#" onclick="document.forms['form2'].submit();"><img src="images/pizza.png" alt="pizza" class="menuItem"></a>
+            <input type="hidden" name="category" value="Pizza">
+           </form>
             <p>Pizza</p>
         </div>
         <div class="menucard">
-            <a href=""><img src="images/sandwich.png" alt="sandwich" class="menuItem"></a>
+            <a href="food.php"><img src="images/sandwich.png" alt="sandwich" class="menuItem"></a>
             <p>Sandwich</p>
         </div>
         <div class="menucard">
-            <a href=""><img src="images/noodles.png" alt="noodles" class="menuItem"></a>
+            <a href="food.php"><img src="images/noodles.png" alt="noodles" class="menuItem"></a>
             <p>Noodles</p>
         </div>
         <div class="menucard">
-            <a href=""><img src="images/pasta.png" alt="pasta" class="menuItem"></a>
+            <a href="food.php"><img src="images/pasta.png" alt="pasta" class="menuItem"></a>
             <p>Pasta</p>
         </div>
         <div class="menucard">
-            <a href=""><img src="images/pavbhaji.png" alt="pav bhaji" class="menuItem"></a>
+            <a href="food.php"><img src="images/pavbhaji.png" alt="pav bhaji" class="menuItem"></a>
             <p>Pav Bhaji</p>
         </div>
         <div class="menucard">
-            <a href=""><img src="images/drinks.jpg" alt="drinks" class="menuItem"></a>
+            <a href="food.php"><img src="images/drinks.jpg" alt="drinks" class="menuItem"></a>
             <p>Drinks</p>
         </div>
         <div class="menucard">
-            <a href=""><img src="images/chaat.png" alt="chaat" class="menuItem"></a>
+            <a href="food.php"><img src="images/chaat.png" alt="chaat" class="menuItem"></a>
             <p>Chaat</p>
         </div>
         <div class="menucard">
-            <a href=""><img src="images/burger.png" alt="burger" class="menuItem"></a>
+            <a href="food.php"><img src="images/burger.png" alt="burger" class="menuItem"></a>
             <p>Burger</p>
         </div>
     </div>
