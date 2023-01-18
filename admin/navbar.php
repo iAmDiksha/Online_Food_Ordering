@@ -6,41 +6,11 @@
         header('location: adminlogin.php');
     }
 ?>
+<link href="../css/css/fontawesome.css" rel="stylesheet">
+<link href="../css/css/brands.css" rel="stylesheet">
+<link href="../css/css/solid.css" rel="stylesheet">
+<link rel="stylesheet" href="css/navbar.css">
 
-<link rel="stylesheet" href="../css/header.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
-<style>
-    :root{
-        --admin : #192b3f;
-        --color : #31c9c9;
-        --special : #007f9a;
-    }
-    .header{
-        background-color: var(--admin);
-    }
-    .menu a{
-        color: var(--color);
-    }
-    .flex a{
-        color: var(--color);
-    }
-
-    .profile p{
-        color: var(--admin);
-        padding: 5px 10px;
-        margin-bottom: 5px;
-    }
-    .profile .flex-btns a{
-        text-transform: none;
-        color: var(--special);
-        display: inline-block;
-        width: 100%;
-        padding: 8px 10px;
-    }
-    .profile .flex-btns a:hover{
-        background-color: var(--body);
-    }
-</style>
 <header class="header">
 
     <section class="flex">
@@ -48,13 +18,14 @@
         <a href="dashboard.php" class="logo"><h2>AdminPanel</h2></a>
 
         <nav class="navbar">
-            <a href="dashboard.php">Dashboard</a>
-            <a href="users.php">Users</a>
-            <a href="product.php">Products</a>
-            <a href="category.php">Category</a>
-            <a href="orders.php">Orders</a>
-            <a href="admins.php">Admins</a>
-            <a href="messages.php">Messages</a>
+            <a href="dashboard.php"><i class="fas fa-th-large"></i> Dashboard</a>
+            <a href="users.php"><i class="fas fa-users"></i> Users</a>
+            <a href="product.php"><i class="fas fa-shopping-cart"></i> Products</a>
+            <a href="category.php"><i class="fas fa-list"></i> Category</a>
+            <a href="orders.php"><i class="fas fa-truck"></i> Orders</a>
+            <a href="canceled.php"><i class="fas fa-times"></i> Cancelled Orders</a>
+            <!-- <a href="admins.php">Admins</a> -->
+            <a href="messages.php"><i class="fas fa-comments"></i> Messages</a>
         </nav>
 
         <div class="icons">
@@ -72,15 +43,16 @@
              <a href="components/user_logout.php" onclick="return confirm('logout from this website?');" class="delete-btn">logout</a> -->
 
     </section>
-
+<!-- 
+    //!
     <nav class="menu">
     <a href="dashboard.php">Dashboard</a>
             <a href="users.php">Users</a>
             <a href="product.php">Products</a>
             <a href="orders.php">Orders</a>
-            <a href="admins.php">Admins</a>
-            <a href="messages.php">Messages</a>
-    </nav>
+        <a href="admins.php">Admins</a> 
+             <a href="messages.php">Messages</a> 
+     </nav> -->
 
     <div class="profile">
         <?php
@@ -90,9 +62,9 @@
         ?>
         <div class="flex-btns">
             <a href="adminprofile.php">Profile</a><br>
-            <a href="adminlogin.php">Login</a><br>
-            <a href="adminlogout.php" onclick="return confirm('Are you sure you want to logged out?');">Logout</a>
-            <a href="adminregister.php">Register a new admin</a><br>
+            <!-- <a href="adminlogin.php">Login</a><br> -->
+            <a href="adminlogout.php" onclick="return confirm('Are you sure you want to logged out?');">Logout <i class="fas fa-sign-out-alt"></i></a>
+            <!-- <a href="adminregister.php">Register a new admin</a><br> -->
         </div>
         <!-- <a href="login.php"><button class="login-btn">Login</button></a> -->
     </div>

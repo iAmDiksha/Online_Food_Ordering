@@ -49,7 +49,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
     ?>
     <form action="adminlogin.php" method="post" class="login_form">
-        <h1>Login</h1>
+        <h1>Admin Login</h1>
         <!-- username = admin
         password = 1q2w3e -->
         <input type="text" name="name" placeholder="Username" required>

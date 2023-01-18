@@ -20,7 +20,12 @@ if (isset($_SESSION['cart'])) {
 ?>
 
 <link rel="stylesheet" href="css/header.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+<link href="css/css/fontawesome.css" rel="stylesheet">
+<link href="css/css/brands.css" rel="stylesheet">
+<link href="css/css/solid.css" rel="stylesheet">
+
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" /> -->
 
 <header class="header">
 

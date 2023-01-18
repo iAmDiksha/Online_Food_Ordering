@@ -47,3 +47,36 @@
     width: 250px;
     margin: 40px;
 }
+
+.btn{
+    background-color: var(--danger);
+    font-size: 15px;
+    border: none;
+    color: var(--white);
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+.btn:hover {
+    background-color: darkred;
+    cursor: pointer;
+}
+.reason-form {
+    border: 1px solid var(--black);
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 20px;
+    margin: 30px auto;
+}
+
+.reason-form textarea{
+    font-size: 20px;
+    padding: 10px;
+    background-color: transparent;
+    border: 2px solid var(--black);
+}
+
+.error{
+    color: var(--danger);
+}

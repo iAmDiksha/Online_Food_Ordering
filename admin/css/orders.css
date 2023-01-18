@@ -1,6 +1,31 @@
 .main{
-    min-height: 90vh;
+    min-height: 100vh;
     text-align: center;
     padding: 30px;
     background-color: var(--body);
+}
+
+.order_table{
+    margin: 10px auto;
+}
+
+
+.order_table, th, td{
+    border: 1px solid var(--black);
+    border-collapse: collapse;
+    padding: 10px;
+}
+
+.status{
+    padding: 5px;
+    font-size: 16px;
+    background-color: transparent;
+}
+
+.btn{
+    background-color: var(--danger);
+    padding: 5px 10px;
+    font-size: 16px;
+    border: none;
+    color: var(--white);
 }

@@ -1,0 +1,101 @@
+
+:root {
+  --main-color: gold;
+  --white: #fff;
+  --black: #000;
+  --danger: red;
+  --footer: #262d34;
+  --body: #ebedf3;
+  --light-color: #777;
+  --admin : #192b3f;
+  --color : #31c9c9;
+  --special : #007f9a;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+  font-size: 20px;
+}
+
+body ::selection{
+  background-color: var(--color);
+  color: var(--black);
+}
+
+.btn{
+  cursor: pointer;
+  text-transform: uppercase;
+}
+.header{
+    background-color: var(--admin);
+    min-height: 100vh;
+    width: 230px;
+    position: fixed;
+}
+
+.main{
+    margin-left: 230px;
+}
+
+.footer{
+    margin-left: 230px;
+}
+
+.flex{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    text-align: center;
+}
+
+.navbar{
+    display: flex;
+    flex-direction: column;
+    margin: 10px 5px;
+    text-align: left;
+}
+
+.navbar a{
+  padding: 10px;
+}
+
+.navbar a i{
+  margin-right: 5px;
+}
+
+.navbar a:hover{
+  color: var(--admin);
+  background-color: var(--color);
+}
+
+ /* !!!  */
+
+.menu a{
+    color: var(--color);
+}
+.flex a{
+    color: var(--color);
+}
+
+.profile p{
+    color: var(--admin);
+    padding: 5px 10px;
+    margin-bottom: 5px;
+}
+.profile .flex-btns a{
+    text-transform: none;
+    color: var(--special);
+    display: inline-block;
+    width: 100%;
+    padding: 8px 10px;
+}
+.profile .flex-btns a:hover{
+    background-color: var(--body);
+}

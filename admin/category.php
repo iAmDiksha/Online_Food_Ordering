@@ -30,7 +30,7 @@
             <h1>Food Categories</h1>
             <table class="category_table">
                 <thead>
-                    <th>Id</th>
+                    <th>Serial No.</th>
                     <th>Category Name</th>
                     <th>Number of products</th>
                     <th></th>
@@ -42,15 +42,17 @@
                 $sql = "SELECT * FROM countcategory;";
                 $result = mysqli_query($con, $sql) or die("query unsuccessful!");
                 $num = mysqli_num_rows($result);
+                $ct = 0;
                 if ($num > 0) {
                 ?>
                     <tbody>
                         <?php
                         while ($row = mysqli_fetch_assoc($result)) {
+                            $ct++;
                         ?>
                             <form action="category.php" method="post">
                                 <tr>
-                                    <td><?php echo $row['cid'] ?></td>
+                                    <td><?php echo $ct; ?></td>
                                     <!-- <input type="hidden" name="id" value="<?php echo $row['cid']; ?>"> -->
                                     <td><?php echo $row['cname'] ?></td>
                                     <?php

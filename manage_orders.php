@@ -9,15 +9,14 @@
                 $mobile_number = $_SESSION['mobile_number'];
                 $email = $_SESSION['email'];
 
-                //!!!!
                 $sql = "select `sno` from user where email = '$email'";
                 $result = mysqli_query($con, $sql);
                 $rowData = mysqli_fetch_array($result);
                 $_SESSION['user_id'] = $rowData["sno"];
                 $user_id = $_SESSION['user_id'];
-                //!!!!
                 
-                $method = $_POST['radio'];
+                // $method = $_POST['radio'];
+                $method = Cash on delivery;
                 $payment_status = "Pending";
                 $address = $_SESSION['address'];
                 $total_price = $_POST['grand_total'];
@@ -36,51 +35,39 @@
                             $result = mysqli_query($con, $sql);
                 }
 
-
+                
                 if($result){
-                    if($method == 'Cash on delivery')
-                    {
+                    unset($_SESSION['cart']);
+                    // if($method == 'Cash on delivery')
+                    // {
                         echo '
                             <script>
                                 alert("Your Order has been successfully placed.");
                                 window.location.href = "orders.php";
                             </script>
                             ';
-                        unset($_SESSION['cart']);
-                    }
-                    else{
-                    // $currdate = date("Y-m-d");
-                    // $currtime = 
-                    // $sql = "select * from orders where date = $currdate and time = $currtime and user_id = $user_id";
-                    // $result = mysqli_query($con, $sql);
-                    // $rowData = mysqli_fetch_array($result);
-                    // $_SESSION['order_id'] = $rowData["id"];
+                        
+                    // }
+                    // else{
+                    // // $currdate = date("Y-m-d");
+                    // // $currtime = 
+                    // // $sql = "select * from orders where date = $currdate and time = $currtime and user_id = $user_id";
+                    // // $result = mysqli_query($con, $sql);
+                    // // $rowData = mysqli_fetch_array($result);
+                    // // $_SESSION['order_id'] = $rowData["id"];
 
-                        echo '
-                             <form method="post" id="form" action="onlinepayment.php">
-                                <input type="hidden" name="grand_total" value="'.$total_price.'">
-                             </form>
-                             <script>
-                                document.getElementById("form").submit();
-                             </script>
-                            ';
-                    }
+                    //     echo '
+                    //          <form method="post" id="form" action="onlinepayment.php">
+                    //             <input type="hidden" name="grand_total" value="'.$total_price.'">
+                    //          </form>
+                    //          <script>
+                    //             document.getElementById("form").submit();
+                    //          </script>
+                    //         ';
+                    // }
                 }
             }
         }
     }
 ?>
 
-<script>
-window.addEventListener('popstate', function (event)
-{
-    
-    // // const leavePage = confirm("");
-    // if (leavePage) {
-    //     history.back(); 
-    // } else {
-    //     history.pushState(null, document.title, location.href);
-    // }  
-});
-
-</script>

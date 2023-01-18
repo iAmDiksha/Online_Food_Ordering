@@ -60,10 +60,11 @@
                     <a href="profile.php" class="btn btn1">Go to your profile to update details</a>
                     <!-- <a href="update_address.php" class="btn">update address</a> -->
                     <!-- <button type="submit" name="update_address" class="btn btn1">update address</button> -->
-                    <select name="method" class="box" required>
-                        <option value="" disabled selected>select payment method --</option>
-                        <option value="cash on delivery" name="Cash on delivery">cash on delivery</option>
-                        <option value="online payment" name="Online payment">online payment</option>
+                    <select name="method" class="box">
+                    <!-- required -->
+                        <!-- <option value="" disabled selected>select payment method --</option> -->
+                        <option value="cash on delivery" name="Cash on delivery" selected>cash on delivery</option>
+                        <!-- <option value="online payment" name="Online payment">online payment</option> -->
                         <!-- <option value="paytm">paytm</option>
                         <option value="paypal">paypal</option> -->
                     </select>

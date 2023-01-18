@@ -13,8 +13,6 @@
     include 'header.php';
     ?>
     <main class="main">
-    <!-- <p>You didn't order anything yet.</p> -->
-   
     <?php
         if(isset($_SESSION['registered']) && $_SESSION['registered'] == true){
             $email = $_SESSION['email'];
@@ -31,9 +29,11 @@
             if($num > 0){
                 echo ' <div class="container">';
                 while($row = mysqli_fetch_assoc($result)){ 
+                    $id = $row['id'];
                     echo '<div class="box">
                     <div class="time">'. $row['date'].' | '. $row['time'] .'</div>
                     <div class="details">
+                    <p>Order ID: <span>'.$id.'</span></p>
                     <p>Payment method: <span> '. $row['method'] .'</span></p>
                         <p>Address: <span>'. $row['address'] .'</span> </p>
                     <p>Orders:</p>
@@ -47,8 +47,19 @@
                     }
                     echo '
                     </div>
-                    <p>Total Price: <span>'. $row['total_price'].'</span></p>
+                    <p>Total Price: <span>'. $row['total_price'].' Rs.</span></p>
                     <p>Payement Status: <span style="color:red;">'. $row['payment_status'].'</span></p>
+                    ';
+                    if($row['payment_status'] == 'Pending'){
+                    ?>
+                        <br>
+                        <form action="cancel_order.php" method="post">
+                            <input type="hidden" name="id" value="<?php echo $id ?>">
+                            <button type="submit" id="cancel-order-button" name="cancel_order" class="btn">Cancel Order</button>
+                        </form>
+                    <?php   
+                    }
+                    echo '
                     </div>
                     </div>';
                 }  
