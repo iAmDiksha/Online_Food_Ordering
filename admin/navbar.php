@@ -26,17 +26,28 @@
             <a href="canceled.php"><i class="fas fa-times"></i> Cancelled Orders</a>
             <!-- <a href="admins.php">Admins</a> -->
             <a href="messages.php"><i class="fas fa-comments"></i> Messages</a>
+            <a href="adminprofile.php"><i class="fas fa-user"></i> Admin Profile</a>
         </nav>
 
-        <div class="icons">
+        <!-- <div class="profile"> -->
+        <div class="flex-btns">
+           
+            <!-- <a href="adminlogin.php">Login</a><br> -->
+            <a href="adminlogout.php" onclick="return confirm('Are you sure you want to logged out?');">Logout <i class="fas fa-sign-out-alt"></i></a>
+            <!-- <a href="adminregister.php">Register a new admin</a><br> -->
+        </div>
+        <!-- <a href="login.php"><button class="login-btn">Login</button></a> -->
+    <!-- </div> -->
+
+        <!-- <div class="icons">
             <a href="#">
                 <div id="user-btn" class="fas fa-user"></div>
-            </a>
-            <a href="#">
+            </a> -->
+            <!-- <a href="#">
                 <div id="hamburger" class="fas fa-bars"></div>
-            </a>
+            </a> -->
             <!-- <a href="#" class="hamburger close-btn"><i class="fas fa-times"></i></a> -->
-        </div>
+        <!-- </div> -->
 
 
         <!-- <a href="profile.php" class="btn">profile</a>
@@ -54,20 +65,7 @@
              <a href="messages.php">Messages</a> 
      </nav> -->
 
-    <div class="profile">
-        <?php
-            // if($login){
-                echo "<p>Hello, ". $_SESSION['name'] ."</p>";
-            // }
-        ?>
-        <div class="flex-btns">
-            <a href="adminprofile.php">Profile</a><br>
-            <!-- <a href="adminlogin.php">Login</a><br> -->
-            <a href="adminlogout.php" onclick="return confirm('Are you sure you want to logged out?');">Logout <i class="fas fa-sign-out-alt"></i></a>
-            <!-- <a href="adminregister.php">Register a new admin</a><br> -->
-        </div>
-        <!-- <a href="login.php"><button class="login-btn">Login</button></a> -->
-    </div>
+    
 
 </header>
 

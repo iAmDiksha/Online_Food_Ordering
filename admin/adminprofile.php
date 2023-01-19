@@ -27,11 +27,9 @@
                 <img src="../images/user-icon.png">
             </div>
                 <div class="user-info">
-                    <!-- <h3>your info</h3> -->
                     <input type="hidden" name="id" value="<?php echo $row['id']?>">
                     <p><i class="fas fa-user"></i><span><?php echo $_SESSION['name'] ?></span></p>
                     <p><i class="fas fa-envelope"></i><span><?= $_SESSION['adminemail'] ?></span></p>
-                    <!-- <a href="admin_update_profile.php" class="btn btn1">update info</a> -->
                     <button type="submit" name="admin_update_profile" class="btn btn1">update info</button>
                     
                     <a href="adminlogout.php" class="btn" style="width:100%; background:var(--danger); color:var(--white);" onclick="return confirm('You will be logged out!');">Logout</a>

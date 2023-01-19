@@ -17,7 +17,7 @@
   margin: 0;
   padding: 0;
   text-decoration: none;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: Cambria, Times, 'Times New Roman', serif;
 }
 
 body {
@@ -51,51 +51,35 @@ body ::selection{
 .flex{
     display: flex;
     flex-direction: column;
-    margin: 10px;
+    margin: 20px 10px;
     text-align: center;
 }
 
-.navbar{
+.navbar, .flex-btns{
     display: flex;
     flex-direction: column;
     margin: 10px 5px;
     text-align: left;
 }
 
-.navbar a{
-  padding: 10px;
+.navbar a, .flex-btns a{
+  padding: 12px;
 }
 
-.navbar a i{
+.navbar a i, .flex-btns a i{
   margin-right: 5px;
 }
 
-.navbar a:hover{
+.navbar a:hover, .flex-btns a:hover{
   color: var(--admin);
   background-color: var(--color);
 }
 
- /* !!!  */
-
-.menu a{
-    color: var(--color);
-}
 .flex a{
     color: var(--color);
 }
 
-.profile p{
-    color: var(--admin);
-    padding: 5px 10px;
-    margin-bottom: 5px;
-}
-.profile .flex-btns a{
-    text-transform: none;
-    color: var(--special);
-    display: inline-block;
-    width: 100%;
-    padding: 8px 10px;
-}
-.profile .flex-btns a:hover{
-    background-color: var(--body);
+.flex-btns{
+  bottom: 0;
+  text-align: center;
 }
