@@ -21,12 +21,12 @@
     margin: 20px;
 }
 
-.message_box button{
+.btn{
     background-color: var(--danger);
-    padding: 5px 30px;
-    font-size: 22px;
+    padding: 5px 10px;
+    font-size: 16px;
     border: none;
-    margin-top: 20px;
     color: var(--white);
     cursor: pointer;
+    margin-top: 10px;
 }

@@ -1,6 +1,5 @@
 <!--
     //! mobile number validation (only digits up to 10 are allowed.)
-    //! email OTP / Code
  -->
 
 <?php
@@ -66,8 +65,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="./css/signup.css?php echo time(); ?>">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet" href="./css/signup.css">
     <title>Sign up</title>
 </head>
 
@@ -88,9 +86,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
     ?>
 
-    <div class="back_to_home">
-    <a href="home.php"><i class="fas fa-home"></i> Back to Home</a>
-    </div>
+    <button class="back_to_home" onclick="history.back();">Back</button>
     <form action="signup.php" method="post" class="signup_form">
         <h1>Sign up</h1>
         <input type="text" maxlength="30" name="full_name" placeholder="Full Name" required>

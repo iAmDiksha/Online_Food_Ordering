@@ -38,7 +38,7 @@
                             <p>Email: <?php echo $row['email']; ?></p>
                             <p>Mobile Number: <?php echo $row['phone']; ?></p>
                             <p>Message: <?php echo $row['message']; ?></p>
-                            <button type="submit" id="delete_btn" onclick="return confirm('delete this message?');">Delete</button>
+                            <button type="submit" id="delete_btn" class="btn" onclick="return confirm('delete this message?');">Delete</button>
                         </div>
                     </form>
                 <?php

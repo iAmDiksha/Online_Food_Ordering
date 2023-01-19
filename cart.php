@@ -89,7 +89,7 @@ else {
         <div class="emptyCart">
             <img src="images/emptyCart.png" alt="" class="cartImage">
             <div>
-                <h2>Your cart is waiting to be filled</h2>
+                <h3>Your cart is waiting to be filled</h3>
                 <p class="lightText">CHOOSE AN ITEM FROM THE MENU TO GET STARTED.</p>
             </div>
             <a href="menu.php"><button>Start Shopping</button></a>

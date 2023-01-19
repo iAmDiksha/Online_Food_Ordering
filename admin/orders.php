@@ -28,7 +28,8 @@
     ?>
 
     <main class="main">
-    <h1>Orders</h1>
+        <h1>Customer Orders</h1>
+        <br>
             <table class="order_table">
                 <thead>
                     <th>Order Id</th>
@@ -65,9 +66,11 @@
                           $uid = $row['user_id'];
                           $sql = "select * from `ordered_items` where `user_id` = $uid and date = '$date' and time = '$time'";
                           $res = mysqli_query($con, $sql);
+                          echo '<td>';
                           while($rowData = mysqli_fetch_assoc($res)){
-                              echo '<td>'. $rowData['quantity'] .' '. $rowData['name'] .' -> '. $rowData['quantity'] .' X ' . $rowData['price'] .' = '. $rowData['quantity']*$rowData['price'] .' </td><br> ';
+                              echo  $rowData['quantity'] .' '. $rowData['name'] .' -> '. $rowData['quantity'] .' X ' . $rowData['price'] .' = '. $rowData['quantity']*$rowData['price'] .'<br> ';
                           }
+                          echo '</td>';
                         ?>
                         <td><?php echo $row['total_price'].' Rs.' ?></td>
                         <td><?php echo $row['address'] ?></td>

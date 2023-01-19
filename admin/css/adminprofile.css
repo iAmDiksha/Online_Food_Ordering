@@ -1,5 +1,5 @@
 .main {
-  min-height: 90vh;
+  min-height: 100vh;
   padding: 30px;
   background-color: var(--body);
   text-align: center;
@@ -23,7 +23,7 @@
 }
 
 .profile_container .image img {
-  width: 180px;
+  width: 150px;
 }
 
 .profile_container form .user-info p i {

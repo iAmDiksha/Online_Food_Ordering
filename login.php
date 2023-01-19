@@ -34,8 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="./css/login.css?php echo time(); ?>">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet" href="./css/login.css">
 </head>
 
 <body>
@@ -53,14 +52,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             ';
     }
     ?>
-    <div class="back_to_home">
-        <a href="home.php"><i class="fas fa-home"></i> Back to Home</a>
-    </div>
+    <button onclick="history.back();" class="back_to_home">Back</button>
     <form action="login.php" method="post" class="login_form">
         <h1>Login</h1>
         <input type="email" name="email" placeholder="Email" required>
         <input type="password" name="password" placeholder="Password" required>
-        <a href="forgotpassword.php">Forgot Password?</a>
+        <!-- <a href="forgotpassword.php">Forgot Password?</a> -->
         <button type="submit">Login</button>
         <div>
             <p>Dont't have an account? <a href="signup.php">Sign up</a></p>

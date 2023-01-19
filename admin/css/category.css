@@ -18,7 +18,7 @@
 .btn{
     background-color: var(--danger);
     padding: 5px 10px;
-    font-size: 22px;
+    font-size: 16px;
     border: none;
     color: var(--white);
     cursor: pointer;

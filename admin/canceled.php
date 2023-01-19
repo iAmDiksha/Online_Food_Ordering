@@ -21,6 +21,7 @@
     ?>
     <main class="main">
     <h1>Canceled Orders</h1>
+    <br>
             <table class="order_table">
                 <thead>
                     <th>S. No.</th>

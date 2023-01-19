@@ -1,19 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;400;700&family=Montserrat:wght@400;600&family=Quicksand:wght@300;500;600&display=swap');
-
+*{
+    box-sizing: border-box;
+    font-family: Cambria, Times, 'Times New Roman', serif;
+}
 body{
-    background-color: cornflowerblue;
-    font-family: 'Quicksand', sans-serif;
+    background-color: #fff;
 }
 .back_to_home{
-    margin: 20px;
-}
-.back_to_home a{
-    text-decoration: none;
-    color: #fff;
+    margin: 10px;
+    padding: 5px 10px;
     font-size: 20px;
-    border: 1px solid #fff;
-    padding: 5px 20px;
+    background-color: transparent;
+    border: 2px solid #000;
+    color: #000;
+    cursor: pointer;
 }
+
 .login_form input{
     padding: 10px;
     border: none;
@@ -25,10 +26,11 @@ body{
 }
 .login_form{
     padding: 10px 30px;
-    width: 350px;
+    width: 400px;
     max-width: 80%;
     background-color: #fff;
-    margin: 30px auto;
+    margin: 10px auto;
+    border: 2px solid gray;
 }
 
 .login_form button{
@@ -36,11 +38,11 @@ body{
     width: 100%;
     padding: 10px;
     font-size: 20px;
-    background-color: cornflowerblue;
-    border-color: cornflowerblue;
+    background-color: gold;
+    border-color: gold;
     outline: none;
     border-radius: 5px;
-    color: white;
+    color: #000;
     text-transform: uppercase;
 }
 

@@ -5,17 +5,8 @@
 body{
     background-color: #fff;
 }
-.back_to_home{
-    margin: 10px;
-    padding: 5px 10px;
-    font-size: 20px;
-    background-color: transparent;
-    border: 2px solid #000;
-    color: #000;
-    cursor: pointer;
-}
 
-.signup_form input{
+.login_form input{
     padding: 10px;
     border: none;
     border-bottom: 2px solid grey;
@@ -24,30 +15,25 @@ body{
     margin: 10px auto;
     width: 94%;
 }
-.signup_form{
+.login_form{
     padding: 10px 30px;
     width: 400px;
     max-width: 80%;
     background-color: #fff;
-    margin: 5px auto;
-    margin-bottom: 50px;
+    margin: 100px auto;
     border: 2px solid gray;
 }
 
-.signup_form button{
+.login_form button{
     margin: 20px auto;
     width: 100%;
     padding: 10px;
     font-size: 20px;
-    background-color: gold;
-    border-color: gold;
+    background-color:#31c9c9;
+    border-color: #31c9c9;
     outline: none;
     border-radius: 5px;
-    color: black;
+    color: #000;
     text-transform: uppercase;
 }
 
-.signup_form a{
-    text-decoration: none;
-    color: blue;
-}

@@ -16,7 +16,7 @@
                 $user_id = $_SESSION['user_id'];
                 
                 // $method = $_POST['radio'];
-                $method = Cash on delivery;
+                $method = "Cash on delivery";
                 $payment_status = "Pending";
                 $address = $_SESSION['address'];
                 $total_price = $_POST['grand_total'];
