@@ -1,8 +1,22 @@
 .main{
     min-height: 90vh;
     text-align: center;
+    /* background-color: var(--body); */
+    background-image: url('../images/bg9.jpg');
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.main_box{
+    color: var(--white);
     padding: 30px;
-    background-color: var(--body);
+    min-height: 100vh;
+    width: 100%;
+    background-color:rgba(110, 130, 139,0.5);
+    backdrop-filter: blur(3px);
 }
 
 .container{
@@ -17,14 +31,17 @@
 .box{
     padding: 30px;
     text-align: left;
-    border: 1px solid var(--black);
+    /* border: 1px solid var(--black); */
     width: 600px;
     margin: auto;
     max-width: 85%;
+    background-color: var(--body);
+    color: var(--black);
 }
 
 .box .details p{
     color: var(--light-color);
+    font-weight: 900;
 }
 
 .box .details p span, .box .details .orders p{

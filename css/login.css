@@ -1,17 +1,30 @@
 *{
     box-sizing: border-box;
     font-family: Cambria, Times, 'Times New Roman', serif;
+    margin: 0;
+    padding: 0;
 }
 body{
-    background-color: #fff;
+    background-image: url('../images/bg8.jpg');
+    min-height: 100vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.container{
+    min-height: 100vh;
+    width: 100%;
+    background-color:rgba(110, 130, 139,0.5);
+    backdrop-filter: blur(3px);
 }
 .back_to_home{
-    margin: 10px;
+    margin: 20px;
     padding: 5px 10px;
     font-size: 20px;
     background-color: transparent;
-    border: 2px solid #000;
-    color: #000;
+    border: 2px solid #fff;
+    color: #fff;
     cursor: pointer;
 }
 
@@ -23,14 +36,15 @@ body{
     font-size: 20px;
     margin: 10px auto;
     width: 94%;
+    background-color: transparent;
 }
 .login_form{
-    padding: 10px 30px;
+    padding: 30px;
     width: 400px;
     max-width: 80%;
     background-color: #fff;
     margin: 10px auto;
-    border: 2px solid gray;
+    border-radius: 10px;
 }
 
 .login_form button{

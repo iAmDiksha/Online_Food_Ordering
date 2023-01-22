@@ -1,9 +1,34 @@
 *{
     box-sizing: border-box;
     font-family: Cambria, Times, 'Times New Roman', serif;
+    margin: 0;
+    padding: 0;
 }
 body{
-    background-color: #fff;
+    background-image: url('../../images/bg9.jpg');
+    height: 100vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.container{
+    height: 100vh;
+    width: 100%;
+    background-color:rgba(110, 130, 139,0.5);
+    backdrop-filter: blur(3px);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    column-gap: 20px;
+    padding-left: 100px;
+    padding-right: 50px;
+}
+
+.heading{
+    max-width: 450px;
+    color: #fff;
 }
 
 .login_form input{
@@ -14,14 +39,16 @@ body{
     font-size: 20px;
     margin: 10px auto;
     width: 94%;
+    background-color: transparent;
 }
 .login_form{
-    padding: 10px 30px;
+    padding: 30px;
     width: 400px;
     max-width: 80%;
-    background-color: #fff;
-    margin: 100px auto;
-    border: 2px solid gray;
+    background-color: transparent;
+    margin: auto;
+    border-radius: 10px;
+    background-color: #ebedf3;
 }
 
 .login_form button{

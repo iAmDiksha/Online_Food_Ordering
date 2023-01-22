@@ -68,7 +68,7 @@
                           $res = mysqli_query($con, $sql);
                           echo '<td>';
                           while($rowData = mysqli_fetch_assoc($res)){
-                              echo  $rowData['quantity'] .' '. $rowData['name'] .' -> '. $rowData['quantity'] .' X ' . $rowData['price'] .' = '. $rowData['quantity']*$rowData['price'] .'<br> ';
+                              echo $rowData['quantity'] .' '. $rowData['name'] .' -> '. $rowData['quantity'] .' X ' . $rowData['price'] .' = '. $rowData['quantity']*$rowData['price'] .'<br>';
                           }
                           echo '</td>';
                         ?>
@@ -79,13 +79,21 @@
                         <?php 
                             $status = $row['payment_status'];
                         ?>
+
                         <td>
                             <select name="payment_status" class="status">
-                                <option value="<?php echo $status?>" selected disabled><?php echo $status; ?></option>
-                                <option value="Pending">Pending</option>
-                                <option value="Completed">Completed</option>
+                                <option value="<?php echo $status?>" selected><?php echo $status; ?></option>
+                                <?php 
+                                    if($status == 'Pending'){
+                                      echo '<option value="Completed">Completed</option>';
+                                    }
+                                    else{
+                                      echo '<option value="Pending">Pending</option>';
+                                    }
+                                ?>
                             </select>
                         </td>
+
                         <td><button class="btn" name="update_status" type="submit">Update</button>
                         </td>
                         </tr>

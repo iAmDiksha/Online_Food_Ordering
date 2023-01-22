@@ -10,6 +10,15 @@
     margin: auto;
 }
 
+.order_table thead{
+    background-color: var(--special);
+    color: var(--white);
+}
+
+.order_table tbody form tr :nth-child(even){
+    background-color: 
+    #dbdefd ;
+}
 
 .order_table, th, td{
     border: 1px solid var(--black);

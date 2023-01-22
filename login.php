@@ -52,6 +52,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             ';
     }
     ?>
+    <div class="container">
     <button onclick="history.back();" class="back_to_home">Back</button>
     <form action="login.php" method="post" class="login_form">
         <h1>Login</h1>
@@ -63,6 +64,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <p>Dont't have an account? <a href="signup.php">Sign up</a></p>
         </div>
     </form>
+    </div>
 </body>
 
 </html>

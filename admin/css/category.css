@@ -9,6 +9,11 @@
     margin: 30px auto;
 }
 
+.category_table thead{
+    background-color: var(--special);
+    color: var(--white);
+}
+
 .category_table, th, td{
     border: 1px solid var(--black);
     border-collapse: collapse;
@@ -23,3 +28,9 @@
     color: var(--white);
     cursor: pointer;
 }
+
+.btn1{
+    padding: 10px;
+    background-color: var(--special);
+}
+

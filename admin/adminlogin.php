@@ -47,6 +47,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             ';
     }
     ?>
+    <div class="container">
+    <div class="heading">
+        <h1>Admin Login | Online Food Ordering System</h1>
+    </div>
     <form action="adminlogin.php" method="post" class="login_form">
         <h1>Admin Login</h1>
         <!-- username = admin
@@ -55,6 +59,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <input type="password" name="password" placeholder="Password" required>
         <button type="submit">Login</button>
     </form>
+    </div>
 </body>
 
 </html>

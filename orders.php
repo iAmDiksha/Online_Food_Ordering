@@ -27,8 +27,13 @@
             $num = mysqli_num_rows($result);
             
             if($num > 0){
-                echo ' <div class="container">';
-                while($row = mysqli_fetch_assoc($result)){ 
+                echo '
+                <div class="main_box">
+                <h1>Your Orders</h1>
+                <br> 
+                <div class="container">
+                    ';
+                    while($row = mysqli_fetch_assoc($result)){ 
                     $id = $row['id'];
                     echo '<div class="box">
                     <div class="time">'. $row['date'].' | '. $row['time'] .'</div>
@@ -63,7 +68,7 @@
                     </div>
                     </div>';
                 }  
-                echo '</div>';
+                echo '</div></div>';
             }
 
             else{

@@ -10,6 +10,11 @@
     margin: 30px auto;
 }
 
+.user_table thead{
+    background-color: var(--special);
+    color: var(--white);
+}
+
 .user_table, th, td{
     border: 1px solid var(--black);
     border-collapse: collapse;
