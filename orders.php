@@ -28,8 +28,9 @@
             
             if($num > 0){
                 echo '
+                <div class="main_orders">
                 <div class="main_box">
-                <h1>Your Orders</h1>
+                <h1>My Orders</h1>
                 <br> 
                 <div class="container">
                     ';
@@ -68,7 +69,7 @@
                     </div>
                     </div>';
                 }  
-                echo '</div></div>';
+                echo '</div></div></div>';
             }
 
             else{
@@ -77,6 +78,7 @@
                 <img src='images/no_orders1.webp'>
                 <h2>No Orders Yet</h2>
                 <p>Looks like you haven't made your choice yet...</p>
+                <a href='menu.php'><button class='order_btn'>Order Now</button></a>
                 </div>
                 ";
             }
@@ -86,6 +88,7 @@
            <img src='images/no_orders1.webp'>
            <h2>No Orders Yet</h2>
            <p>Looks like you haven't made your choice yet...</p>
+           <a href='menu.php'><button class='order_btn'>Order Now</button></a>
            </div>";
         }
     ?>

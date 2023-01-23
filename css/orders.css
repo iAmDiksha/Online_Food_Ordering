@@ -1,7 +1,16 @@
-.main{
+.main, .reason_container{
     min-height: 90vh;
     text-align: center;
-    /* background-color: var(--body); */
+    background-color: var(--body);
+    width: 100%;
+}
+
+.reason_container{
+    padding-top: 50px;
+}
+
+.main_orders{
+    min-height: 90vh;
     background-image: url('../images/bg9.jpg');
     width: 100%;
     background-repeat: no-repeat;
@@ -84,7 +93,7 @@
     flex-direction: column;
     text-align: left;
     padding: 20px;
-    margin: 30px auto;
+    margin: auto;
 }
 
 .reason-form textarea{
@@ -94,6 +103,12 @@
     border: 2px solid var(--black);
 }
 
-.error{
-    color: var(--danger);
+.order_btn{
+    margin-top: 10px;
+    background-color: var(--main-color);
+    font-size: 17px;
+    border: none;
+    color: var(--black);
+    padding: 10px 20px;
+    cursor: pointer;
 }

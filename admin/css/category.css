@@ -5,6 +5,32 @@
     background-color: var(--body);
 }
 
+.add{
+    width: 400px;
+    margin: auto;
+    border: 1px solid var(--black);
+    padding: 25px 0;
+}
+
+.add_form{
+    text-align: left;
+    width: 400px;
+    padding: 10px 20px;
+}
+
+.add_form .input{
+    margin: 10px auto;
+}
+
+.add_form input{
+    color: var(--black);
+    width: 100%;;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid var(--black);
+    background-color: transparent;
+}
+
 .category_table{
     margin: 30px auto;
 }
@@ -20,6 +46,12 @@
     padding: 10px;
 }
 
+.category_table img{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
 .btn{
     background-color: var(--danger);
     padding: 5px 10px;
@@ -27,6 +59,7 @@
     border: none;
     color: var(--white);
     cursor: pointer;
+    margin-top: 10px;
 }
 
 .btn1{

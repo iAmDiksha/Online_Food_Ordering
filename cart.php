@@ -13,7 +13,7 @@
     include 'header.php';
     ?>
 <?php 
-if (isset($_SESSION['registered']) && isset($_SESSION['cart']) && count($_SESSION['cart']) > 0) {
+if (isset($_SESSION['cart']) && count($_SESSION['cart']) > 0) {
 ?>
     <div class="cart_container">
         <div class="heading">
@@ -92,7 +92,7 @@ else {
                 <h3>Your cart is waiting to be filled</h3>
                 <p class="lightText">CHOOSE AN ITEM FROM THE MENU TO GET STARTED.</p>
             </div>
-            <a href="menu.php"><button>Start Shopping</button></a>
+            <a href="menu.php"><button class="btn">Start Shopping</button></a>
         </div>
     </div>
 <?php

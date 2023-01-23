@@ -17,11 +17,11 @@
     width: 200px;
 }
 
-.emptyCart button{
+.emptyCart .btn{
     background-color: var(--main-color);
-    padding: 10px 30px;
+    padding: 10px 20px;
     border: none;
-    font-size: 20px;
+    font-size: 17px;
 }
 
 .emptyCart .lightText{
@@ -37,6 +37,10 @@
 .table{
     width: 100%;
     margin: 10px 20px;
+}
+
+.table thead{
+    background-color: #7dd956;
 }
 
 .table, .table_head , .table_body{

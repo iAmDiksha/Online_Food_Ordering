@@ -1,6 +1,6 @@
 <?php
     session_start();
-    if(isset($_SESSION['registered']) && $_SESSION['registered'] == true){
+    // if(isset($_SESSION['registered']) && $_SESSION['registered'] == true){
         if($_SERVER["REQUEST_METHOD"] == "POST"){
             if(isset($_POST['Add_To_Cart'])){
                 //if cart is having at least one item
@@ -69,11 +69,11 @@
                 }
             }
         }
-    }
-    else{
-        echo '<script>
-        alert("You need to log in before buying");
-        window.location.href="login.php";
-        </script>';
-    }
+    // }
+    // else{
+    //     echo '<script>
+    //     alert("You need to log in before buying");
+    //     window.location.href="login.php";
+    //     </script>';
+    // }
 ?>

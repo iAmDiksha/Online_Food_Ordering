@@ -12,57 +12,31 @@
     ?>
     <main class="main">
         <h1>Our Menu</h1>
-        
-<!--
-    <div class="searchBar">
-        <input type="search" placeholder="Search food">
-        <a href="#"><i class="fas fa-search"></i></a>
-    </div> -->
-
-    <div class="menuCards">
-        <div class="menucard">
-           <form action="food.php" method="post" id="form1">
-           <a href="#" onclick="document.forms['form1'].submit();"> <img src="images/paratha.png" alt="paratha" class="menuItem"> </a>
-           <input type="hidden" name="category" value="Paratha">
-           </form>
-            <p>Paratha</p>
+    <?php 
+        $sql = "select * from `category`";
+        $result = mysqli_query($con, $sql) or die("query unsuccessful!");
+        if (mysqli_num_rows($result) > 0) {
+    ?>
+        <div class="menuCards">
+            <?php
+            $ct = 1;
+            while ($row = mysqli_fetch_assoc($result)) {
+            ?>
+                <div class="menucard">
+                    <form action="food.php" method="post" id="form<?php echo $ct;?>">
+                        <a href="#" onclick="document.forms['form<?php echo $ct;?>'].submit();"> <img src="images/<?php echo $row['cimg'];?>"  class="menuItem"> </a>
+                        <input type="hidden" name="category" value="<?php echo $row['cname'];?>">
+                    </form>
+                    <p><?php echo $row['cname'];?></p>
+                </div>
+            <?php
+                $ct++;
+            }
+            ?>
         </div>
-        <div class="menucard">
-            <form action="food.php" method="post" id="form2">
-            <a href="#" onclick="document.forms['form2'].submit();"><img src="images/pizza.png" alt="pizza" class="menuItem"></a>
-            <input type="hidden" name="category" value="Pizza">
-           </form>
-            <p>Pizza</p>
-        </div>
-        <div class="menucard">
-            <a href="food.php"><img src="images/sandwich.png" alt="sandwich" class="menuItem"></a>
-            <p>Sandwich</p>
-        </div>
-        <div class="menucard">
-            <a href="food.php"><img src="images/noodles.png" alt="noodles" class="menuItem"></a>
-            <p>Noodles</p>
-        </div>
-        <div class="menucard">
-            <a href="food.php"><img src="images/pasta.png" alt="pasta" class="menuItem"></a>
-            <p>Pasta</p>
-        </div>
-        <div class="menucard">
-            <a href="food.php"><img src="images/pavbhaji.png" alt="pav bhaji" class="menuItem"></a>
-            <p>Pav Bhaji</p>
-        </div>
-        <div class="menucard">
-            <a href="food.php"><img src="images/drinks.jpg" alt="drinks" class="menuItem"></a>
-            <p>Drinks</p>
-        </div>
-        <div class="menucard">
-            <a href="food.php"><img src="images/chaat.png" alt="chaat" class="menuItem"></a>
-            <p>Chaat</p>
-        </div>
-        <div class="menucard">
-            <a href="food.php"><img src="images/burger.png" alt="burger" class="menuItem"></a>
-            <p>Burger</p>
-        </div>
-    </div>
+    <?php
+        }
+    ?>
     <?php
     $sql = "select * from menu";
     $result = mysqli_query($con, $sql) or die("query unsuccessful!");

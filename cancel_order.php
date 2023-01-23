@@ -51,16 +51,23 @@
                     ';
                 }
                 else{
-                    echo 'An error has been occured, while cancelling your orders!';
+                    echo '
+                    <script>
+                    alert("An error has been occured, while cancelling your orders!");
+                    </script>
+                    ';
                 }
             }
             else{
-                echo '<p class="error">Reason for cancellation cannot be empty.</p>';
+                echo '<script>
+                    alert("Reason for cancellation cannot be empty.");
+                </script>';
             }
         }
     }
     ?>
     <main class="main">
+        <div class="reason_container">
         <form action="cancel_order.php" method="POST" class="reason-form">
             <input type="hidden" name="id" value="<?php echo $order_id ?>">
             <h3>Reason for cancellation</h3>
@@ -69,6 +76,7 @@
             <br>
             <button type="submit" name="confirm_cancel" class="btn">Submit</button>
         </form>
+        </div>
     </main>
     <?php
     include 'footer.php';

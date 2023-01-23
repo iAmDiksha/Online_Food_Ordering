@@ -13,7 +13,10 @@
     <?php
     include 'header.php';
     if(!isset($_SESSION['registered'])){
-        header('location: login.php');
+        echo '<script>
+            alert("You need to login before buying");
+            window.location.href="login.php";
+            </script>';
     }
     if($_SERVER["REQUEST_METHOD"] == "POST"){
         if(isset($_POST['place_order'])){

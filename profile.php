@@ -21,7 +21,7 @@
     ?>
     <main class="main">
         <div class="profile_container">
-         <h1>Profile</h1>
+         <h1>My Profile</h1>
             <form action="manage_profile.php" method="post">
             <div class="image">
                 <img src="images/user-icon.png">

@@ -15,7 +15,8 @@
     if ($_SERVER["REQUEST_METHOD"] == "POST"){
         if (isset($_POST['add_category'])){
             $cname = $_POST['cname'];
-            $sql = "INSERT INTO `category` (`cname`) VALUES ('$cname');";
+            $image = $_FILES["cimg"]["name"];
+            $sql = "INSERT INTO `category` (`cname`, `cimg`) VALUES ('$cname', '$image');";
             $result = mysqli_query($con, $sql);
 
             if($result){
@@ -44,20 +45,31 @@
     <main class="main">
         <h1>Food Categories</h1>
         <br>
-        <form action="category.php" method="post">
-            <input type="hidden" id="cname" name="cname" value="">
-            <button type="submit" name="add_category" class="btn btn1" onclick="return addCategory();"><i class="fas fa-plus"></i> Add New Category</button>
+        <div class="add">
+        <h3>Add New Category</h3>
+        <form class="add_form" action="category.php" method="post" enctype="multipart/form-data">
+            <div class="input">
+            <input type="text" id="cname" name="cname" placeholder="Enter category name" required>
+            </div>
+            <small>Upload category image (jpg or png preferred)</small>
+            <br>
+            <div class="input">
+            <input type="file" name="cimg" required>
+            </div>
+            <button type="submit" name="add_category" class="btn btn1"><i class="fas fa-plus"></i> Add Category</button>
         </form>
+        </div>
         <div class="container">
             <table class="category_table">
                 <thead>
                     <th>Serial No.</th>
+                    <th>Category Image</th>
                     <th>Category Name</th>
                     <th>Number of products</th>
                     <th></th>
                 </thead>
                 <?php
-                $sql = "SELECT c.cid, c.cname, COUNT(m.fcategory) as count FROM menu m Right JOIN category c on m.fcategory = c.cname GROUP BY cname order by c.cid";
+                $sql = "SELECT c.cid, c.cname, c.cimg, COUNT(m.fcategory) as count FROM menu m Right JOIN category c on m.fcategory = c.cname GROUP BY cname order by c.cid";
                 $result = mysqli_query($con, $sql) or die("query unsuccessful!");
                 $num = mysqli_num_rows($result);
                 $ct = 0;
@@ -72,6 +84,7 @@
                                 <tr>
                                     <td><?php echo $ct; ?></td>
                                     <input type="hidden" name="cid" value="<?php echo $row['cid']; ?>">
+                                    <td><img class="img" src="../images/<?php echo $row['cimg'] ?>" alt=""></td>
                                     <input type="hidden" name="cname" value="<?php echo $row['cname']; ?>">
                                     <td><?php echo $row['cname'] ?></td>
                                     <td><?php echo $row['count'] ?></td>
@@ -88,23 +101,5 @@
             </table>
         </div>
     </main>
-
-    <script>
-        function addCategory(){
-           let add = prompt('Enter the category name: ');
-        //!    ok 
-           if(add != null){
-             if(add == ""){
-                alert("Category name can not be empty!");
-                return false;
-             }
-              add.trim();
-              document.getElementById("cname").value = add;
-              return true;
-           }
-        //!  cancel
-            return false;
-        }
-    </script>
 </body>
 </html>
