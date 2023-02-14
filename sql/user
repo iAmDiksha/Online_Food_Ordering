@@ -1,4 +1,0 @@
-INSERT INTO `user` (`sno`, `full_name`, `email`, `mobile_number`, `password`, `cpassword`, `date`) VALUES ('1', 'Pankaj sharma', 'pankaj34@gmail.com', '9876544321', '12qw', '12qw', current_timestamp());
-
-ALTER TABLE `user` ADD UNIQUE(`email`);
-

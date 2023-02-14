@@ -50,7 +50,7 @@
                                     <td><?php echo $row['email'] ?></td>
                                     <td><?php echo $row['mobile_number'] ?></td>
                                     <td><?php echo $row['date'] ?></td>
-                                    <td><button type="submit" class="btn" onclick="return confirm('delete this message?');">Delete</button></td>
+                                    <td><button type="submit" class="btn" onclick="return confirm('delete this user?');">Delete</button></td>
                                 </tr>
                             </form>
                         <?php

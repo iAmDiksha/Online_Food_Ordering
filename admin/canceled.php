@@ -54,7 +54,7 @@
                         <td><?php echo $row['email'] ?></td>
                         <td><?php echo $row['reason'] ?></td>
                         <td><?php echo $row['date'] ?></td>
-                        <td><button type="submit" class="btn" onclick="return confirm('delete this message?');">Delete</button></td>
+                        <td><button type="submit" class="btn" onclick="return confirm('Are you sure you want to delete this?');">Delete</button></td>
                         </td>
                         </tr>
                     </form>
