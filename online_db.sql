@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 23, 2023 at 07:41 PM
+-- Generation Time: Feb 19, 2023 at 09:13 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -62,7 +62,8 @@ CREATE TABLE `cancel_order` (
 
 INSERT INTO `cancel_order` (`id`, `user_id`, `name`, `email`, `reason`, `date`) VALUES
 (2, 5, 'Riya Jain', 'ria89@gmail.com', ' I do not need it. ', '2023-01-18'),
-(3, 4, 'Pankaj Sharma', 'pankaj45@gmail.com', 'Sorry, but it isn\'t required right now.\r\nI will again make an order if it is required.  ', '2023-01-18');
+(3, 4, 'Pankaj Sharma', 'pankaj45@gmail.com', 'Sorry, but it isn\'t required right now.\r\nI will again make an order if it is required.  ', '2023-01-18'),
+(4, 5, 'Riya Jain', 'ria89@gmail.com', 'no such reason\r\n', '2023-02-01');
 
 -- --------------------------------------------------------
 
@@ -143,7 +144,8 @@ CREATE TABLE `messages` (
 INSERT INTO `messages` (`id`, `name`, `email`, `phone`, `message`) VALUES
 (3, 'Priya', 'priya@gmail.com', '7896443562', 'Amazing service! I like it.'),
 (5, 'harry sharma', 'harry12@email.com', '9956342563', 'This is the best online platform.'),
-(8, 'ranu', 'ranu@gmail.com', '8856442562', 'hello');
+(8, 'ranu', 'ranu@gmail.com', '8856442562', 'hello'),
+(10, 'Rohan', 'rohan123@gmail.com', '7896443562', 'all your foods are delicious.\r\n');
 
 -- --------------------------------------------------------
 
@@ -171,7 +173,9 @@ INSERT INTO `ordered_items` (`id`, `user_id`, `name`, `quantity`, `price`, `time
 (12, 6, 'chinese Noodles', 1, 40, '23:21:01', '2023-01-19'),
 (13, 6, 'Pav Bhaji', 3, 30, '23:21:01', '2023-01-19'),
 (14, 6, 'Mango Juice', 2, 25, '23:21:01', '2023-01-19'),
-(15, 5, 'Aloo Samosa', 4, 10, '12:13:24', '2023-01-23');
+(19, 5, 'Pav Bhaji', 1, 30, '00:22:24', '2023-02-15'),
+(20, 5, 'Vegetable Noodles', 4, 35, '00:22:24', '2023-02-15'),
+(21, 5, 'chinese Noodles', 2, 40, '00:22:24', '2023-02-15');
 
 -- --------------------------------------------------------
 
@@ -201,7 +205,7 @@ INSERT INTO `orders` (`id`, `user_id`, `name`, `mobile_number`, `email`, `method
 (5, 5, 'Riya Jain', '8967829067', 'ria89@gmail.com', 'Cash on delivery', '12, abc road, gandhi nagar, chittorgarh', 399, '2023-01-13', '19:29:31', 'Completed'),
 (7, 6, 'Charvi kapur', '7767854067', 'charvi123@gmail.com', 'Cash on delivery', '67, near nehru park, adarsh nagar, Chittorgarh', 50, '2023-01-13', '20:16:49', 'Completed'),
 (12, 6, 'Charvi kapur', '7767854067', 'charvi123@gmail.com', 'Cash on delivery', '89, adarsh nagar, Chittorgarh', 180, '2023-01-19', '23:21:01', 'Pending'),
-(13, 5, 'Riya Jain', '8967829067', 'ria89@gmail.com', 'Cash on delivery', 'near vision college, chittorgarh', 40, '2023-01-23', '12:13:24', 'Pending');
+(15, 5, 'Riya Jain', '8967829067', 'ria89@gmail.com', 'Cash on delivery', '12, abc road, gandhi nagar, chittorgarh', 250, '2023-02-15', '00:22:24', 'Pending');
 
 -- --------------------------------------------------------
 
@@ -297,37 +301,37 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `cancel_order`
 --
 ALTER TABLE `cancel_order`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `category`
 --
 ALTER TABLE `category`
-  MODIFY `cid` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `cid` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `menu`
 --
 ALTER TABLE `menu`
-  MODIFY `fid` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `fid` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `messages`
 --
 ALTER TABLE `messages`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `ordered_items`
 --
 ALTER TABLE `ordered_items`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `user`
